@@ -20,8 +20,6 @@ const buildBlock = require("../helpers/build-block");
  *
  */
 
-const IS_DEBUG = false;
-
 module.exports = {
   meta: {
     type: "layout",
@@ -51,15 +49,8 @@ module.exports = {
     const option = context.options?.[0] ?? {};
     const keepSideEffectAtTop = option.keepSideEffectAtTop !== false;
 
-    if (IS_DEBUG) console.log("Import Sort: Starting sort rule");
-
     return {
       "Program:exit"(programNode) {
-        if (IS_DEBUG)
-          console.log(
-            `Import Sort: Running Program:exit for file: ${context.getFilename()}`
-          );
-
         const body = programNode.body || [];
         if (body.length === 0) return;
 
@@ -71,7 +62,6 @@ module.exports = {
         const { startImportIndex, lastImportIndex } = findImportRange(body, i);
 
         if (startImportIndex === -1) {
-          if (IS_DEBUG) console.log("Import Sort: No imports found\n");
           return;
         }
 

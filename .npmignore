@@ -1,0 +1,30 @@
+# Test files
+test/
+tests/
+*.test.js
+*.spec.js
+__tests__/
+
+# Development files
+.git/
+.github/
+.vscode/
+.idea/
+
+# CI/CD
+.travis.yml
+.gitlab-ci.yml
+.circleci/
+
+# Documentation (keep README.md)
+docs/
+
+# Misc
+.DS_Store
+*.log
+.env
+.env.*
+
+# Source control
+.gitignore
+.gitattributes

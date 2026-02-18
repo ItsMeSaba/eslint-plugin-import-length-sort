@@ -10,9 +10,30 @@
     "sort",
     "import-length-sort"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sabasilagadze/eslint-plugin-import-length-sort.git"
+  },
+  "homepage": "https://github.com/sabasilagadze/eslint-plugin-import-length-sort#readme",
+  "bugs": {
+    "url": "https://github.com/sabasilagadze/eslint-plugin-import-length-sort/issues"
+  },
   "type": "commonjs",
   "main": "index.js",
+  "files": [
+    "index.js",
+    "rules/",
+    "helpers/",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=7.0.0"
   }
 }
