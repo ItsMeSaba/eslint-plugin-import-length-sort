@@ -23,6 +23,7 @@ import importLengthSort from "eslint-plugin-import-length-sort";
 
 export default [
   {
+    files: ["**/*.{js,jsx,ts,tsx,mjs,cjs}"],
     plugins: {
       "import-length-sort": importLengthSort,
     },
@@ -40,9 +41,19 @@ export default [
   "plugins": ["import-length-sort"],
   "rules": {
     "import-length-sort/sort": "warn"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.js", "*.jsx", "*.ts", "*.tsx", "*.mjs", "*.cjs"],
+      "rules": {
+        "import-length-sort/sort": "warn"
+      }
+    }
+  ]
 }
 ```
+
+> **Note:** The rule automatically skips non-JavaScript files (like `.json`, `.md`, etc.) to prevent parsing errors.
 
 ### Using Recommended Config
 

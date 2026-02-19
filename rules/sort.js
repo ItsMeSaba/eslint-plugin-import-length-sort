@@ -51,6 +51,12 @@ module.exports = {
 
     return {
       "Program:exit"(programNode) {
+        // Only process JavaScript/TypeScript files
+        const filename = context.getFilename();
+        const ext = filename.split(".").pop()?.toLowerCase();
+        const validExtensions = ["js", "jsx", "ts", "tsx", "mjs", "cjs"];
+        if (!validExtensions.includes(ext)) return;
+
         const body = programNode.body || [];
         if (body.length === 0) return;
 
