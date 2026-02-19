@@ -3,7 +3,7 @@
 module.exports = {
   meta: {
     name: "eslint-plugin-import-length-sort",
-    version: "1.1.1",
+    version: "1.1.2",
   },
 
   rules: {
