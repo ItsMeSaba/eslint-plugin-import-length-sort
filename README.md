@@ -2,6 +2,8 @@
 
 > ESLint plugin that sorts imports by line length (default-ish first, then named-only), longest to shortest.
 
+![Demo](./public/demo.gif)
+
 ## Installation
 
 ```bash
@@ -77,9 +79,12 @@ Sorts the top-of-file import block by line length in descending order (longest t
 
 ```json
 {
-  "import-length-sort/sort": ["warn", {
-    "keepSideEffectAtTop": true
-  }]
+  "import-length-sort/sort": [
+    "warn",
+    {
+      "keepSideEffectAtTop": true
+    }
+  ]
 }
 ```
 
@@ -90,22 +95,23 @@ Sorts the top-of-file import block by line length in descending order (longest t
 ### Before
 
 ```js
-import { a } from 'short';
-import defaultExport from 'very-long-module-name';
-import { foo, bar, baz } from 'another-module';
+import { a } from "short";
+import defaultExport from "very-long-module-name";
+import { foo, bar, baz } from "another-module";
 ```
 
 ### After
 
 ```js
-import { foo, bar, baz } from 'another-module';
-import defaultExport from 'very-long-module-name';
-import { a } from 'short';
+import { foo, bar, baz } from "another-module";
+import defaultExport from "very-long-module-name";
+import { a } from "short";
 ```
 
 ## Why Sort by Length?
 
 Sorting imports by line length (longest to shortest) creates a visually appealing "pyramid" or "descending" structure that:
+
 - Makes it easier to scan imports at a glance
 - Reduces cognitive load when reviewing code
 - Creates a consistent, predictable ordering
