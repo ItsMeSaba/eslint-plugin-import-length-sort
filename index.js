@@ -3,7 +3,7 @@
 module.exports = {
   meta: {
     name: "eslint-plugin-import-length-sort",
-    version: "1.0.0",
+    version: "1.1.1",
   },
 
   rules: {
@@ -12,9 +12,10 @@ module.exports = {
 
   configs: {
     recommended: {
+      files: ["**/*.{js,jsx,ts,tsx,mjs,cjs}"],
       plugins: ["import-length-sort"],
       rules: {
-        "import-length-sort/sort": "warn", // softer default
+        "import-length-sort/sort": "warn",
       },
     },
   },
