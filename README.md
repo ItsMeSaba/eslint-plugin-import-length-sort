@@ -2,7 +2,7 @@
 
 > ESLint plugin that sorts imports by line length (default-ish first, then named-only), longest to shortest.
 
-![Demo](./public/demo.gif)
+![Demo](https://github.com/ItsMeSaba/eslint-plugin-import-length-sort/blob/main/public/demo.gif?raw=true)
 
 ## Installation
 
